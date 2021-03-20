@@ -324,6 +324,11 @@ return [
                                     'icon' => 'fas fa-fw fa-shapes',
                                 ],
                                 [
+                                    'text' => 'Estados de Proyectos',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-clipboard-check',
+                                ],
+                                [
                                     'text' => 'Productos',
                                     'url'  => '#',
                                     'icon' => 'fas fa-fw fa-cube',
@@ -332,6 +337,16 @@ return [
                                     'text' => 'Tipos de Productos',
                                     'url'  => '#',
                                     'icon' => 'fas fa-fw fa-cubes',
+                                ],
+                                [
+                                    'text' => 'Convocatorias',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-bullhorn',
+                                ],
+                                [
+                                    'text' => 'Rubros Financiables',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-file-invoice-dollar',
                                 ],
                              ]
         ],
@@ -363,6 +378,11 @@ return [
                                     'icon' => 'fas fa-fw fa-people-carry',
                                 ],
                                 [
+                                    'text' => 'Estatus de Grupos',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-spell-check',
+                                ],
+                                [
                                     'text' => 'Semilleros de Investigación',
                                     'url'  => '#',
                                     'icon' => 'fas fa-fw fa-seedling',
@@ -380,10 +400,33 @@ return [
                                 [
                                     'text' => 'Actividades de Investigación',
                                     'url'  => '#',
-                                    'icon' => 'fas fa-fw fa-tasks '
-                                ]
+                                    'icon' => 'fas fa-fw fa-tasks ',
+                                ],
+
                             ]
         ],
+
+            [
+                'text' => 'UNIVERSIDAD',
+                'icon' => '',
+                'submenu' =>[
+                    [
+                        'text' => 'Facultad',
+                        'url' => '#',
+                        'icon' => 'fas fa-fw fa-university',
+                    ],
+                    [
+                        'text' => 'Departamento',
+                        'url'  => '#',
+                        'icon'  => 'fas  fa-fw fa-landmark',
+                    ],
+                    [
+                        'text'        => 'Programa Academico',
+                        'url'       => '#',
+                        'icon'        => 'fas fa-fw fa-school',
+                    ],
+                ]
+            ]
     ],
 
     /*
