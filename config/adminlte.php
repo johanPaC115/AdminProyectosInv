@@ -14,8 +14,8 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title' => '',
+    'title_prefix' => 'Admin-Proyects | ',
     'title_postfix' => '',
 
     /*
@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Admin</b>Proyects',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -65,11 +65,11 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
-    'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
-    'usermenu_desc' => false,
-    'usermenu_profile_url' => false,
+    'usermenu_header' => true,
+    'usermenu_header_class' => 'bg-navy',
+    'usermenu_image' => true,
+    'usermenu_desc' => true,
+    'usermenu_profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -85,8 +85,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
 
     /*
@@ -101,12 +101,12 @@ return [
     |
     */
 
-    'classes_auth_card' => 'card-outline card-primary',
-    'classes_auth_header' => '',
-    'classes_auth_body' => '',
-    'classes_auth_footer' => '',
-    'classes_auth_icon' => '',
-    'classes_auth_btn' => 'btn-flat btn-primary',
+    'classes_auth_card' => '',
+    'classes_auth_header' => 'bg-gradient-navy',
+    'classes_auth_body' => 'bg-gradient-navy',
+    'classes_auth_footer' => 'text-center',
+    'classes_auth_icon' => 'fa-lg text-light',
+    'classes_auth_btn' => 'btn-flat btn-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -121,14 +121,14 @@ return [
     */
 
     'classes_body' => '',
-    'classes_brand' => '',
+    'classes_brand' => 'bg-danger',
     'classes_brand_text' => '',
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
-    'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_sidebar' => 'sidebar-light-info elevation-2',
+    'classes_sidebar_nav' => 'nav-child-indent',
+    'classes_topnav' => 'navbar-red navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -145,11 +145,11 @@ return [
     */
 
     'sidebar_mini' => true,
-    'sidebar_collapse' => false,
+    'sidebar_collapse' => true,
     'sidebar_collapse_auto_size' => false,
-    'sidebar_collapse_remember' => false,
+    'sidebar_collapse_remember' => true,
     'sidebar_collapse_remember_no_transition' => true,
-    'sidebar_scrollbar_theme' => 'os-theme-light',
+    'sidebar_scrollbar_theme' => 'os-theme-dark',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
     'sidebar_nav_animation_speed' => 300,
@@ -168,7 +168,7 @@ return [
 
     'right_sidebar' => false,
     'right_sidebar_icon' => 'fas fa-cogs',
-    'right_sidebar_theme' => 'dark',
+    'right_sidebar_theme' => 'light',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
     'right_sidebar_scrollbar_theme' => 'os-theme-light',
@@ -187,12 +187,12 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'dashboard-panel',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
-    'password_reset_url' => 'password/reset',
-    'password_email_url' => 'password/email',
+    'password_reset_url' => 'forgot-password',
+    'password_email_url' => 'reset-password',
     'profile_url' => false,
 
     /*
@@ -226,7 +226,7 @@ return [
     'menu' => [
         [
             'text' => 'search',
-            'search' => true,
+            'search' => false,
             'topnav' => true,
         ],
         [
@@ -235,23 +235,40 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
+            'text'        => 'Dashboard',
+            'route'       => 'dashboard-panel',
+            'icon'        => 'fas fa-fw fa-chart-line',
             'label'       => 4,
             'label_color' => 'success',
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text'      => 'settings',
+            'icon'      => 'fas fa-fw fa-users-cog',
+            'submenu'   =>  [
+                                [
+                                    'text' => 'profile',
+                                    'url'  => 'user/profile',
+                                    'icon' => 'fas fa-fw fa-user',
+                                ],
+                                [
+                                    'text' => 'users',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-users',
+                                ],
+                                [
+                                    'text' => 'Roles',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-user-tag',
+                                ],
+                                [
+                                    'text' => 'Permisos',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-user-shield',
+                                ],
+                            ]
         ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
+        /*
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
@@ -289,22 +306,83 @@ return [
                     'url'  => '#',
                 ],
             ],
-        ],
-        ['header' => 'labels'],
+        ],*/
+        ['header' => 'INVESTIGACIÓN'],
         [
-            'text'       => 'important',
+            'text'       => 'Unidad de Extensión',
+            'icon' => 'fas fa-fw fa-sitemap',
+            'icon_color' => 'lightblue',
+            'submenu'    =>  [
+                                [
+                                    'text' => 'Proyectos',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-folder-open',
+                                ],
+                                [
+                                    'text' => 'Tipos de Proyectos',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-shapes',
+                                ],
+                                [
+                                    'text' => 'Productos',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-cube',
+                                ],
+                                [
+                                    'text' => 'Tipos de Productos',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-cubes',
+                                ],
+                             ]
+        ],
+        [
+            'text'       => 'Investigadores',
+            'icon'      => 'fas fa-fw fa-user-graduate',
             'icon_color' => 'red',
-            'url'        => '#',
+            'submenu'    =>  [
+                                [
+                                    'text' => 'Docentes',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-chalkboard-teacher',
+                                ],
+                                [
+                                    'text' => 'Estudiantes',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-book-reader',
+                                ],
+                             ]
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
+            'text'       => 'Unidad de Investigación',
+            'icon'      => 'fas fa-fw fa-microscope',
             'icon_color' => 'cyan',
-            'url'        => '#',
+            'submenu'    =>  [
+                                [
+                                    'text' => 'Grupos de Investigacón',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-people-carry',
+                                ],
+                                [
+                                    'text' => 'Semilleros de Investigación',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-seedling',
+                                ],
+                                [
+                                    'text' => 'Áreas de Investigación',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-boxes',
+                                ],
+                                [
+                                    'text' => 'Lineas de Investigación',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-pallet',
+                                ],
+                                [
+                                    'text' => 'Actividades de Investigación',
+                                    'url'  => '#',
+                                    'icon' => 'fas fa-fw fa-tasks '
+                                ]
+                            ]
         ],
     ],
 
