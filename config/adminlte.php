@@ -15,7 +15,7 @@ return [
     */
 
     'title' => '',
-    'title_prefix' => 'Admin-Proyects | ',
+    'title_prefix' => 'VAIE-Projects | ',
     'title_postfix' => '',
 
     /*
@@ -45,8 +45,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>Proyects',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>VAIE-</b>Projects',
+    'logo_img' => 'vendor/adminlte/dist/img/logoufps.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -66,8 +66,8 @@ return [
 
     'usermenu_enabled' => true,
     'usermenu_header' => true,
-    'usermenu_header_class' => 'bg-navy',
-    'usermenu_image' => true,
+    'usermenu_header_class' => 'bg-gray',
+    'usermenu_image' => false,
     'usermenu_desc' => true,
     'usermenu_profile_url' => true,
 
@@ -87,7 +87,7 @@ return [
     'layout_boxed' => null,
     'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => true,
-    'layout_fixed_footer' => null,
+    'layout_fixed_footer' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -314,39 +314,68 @@ return [
             'icon_color' => 'lightblue',
             'submenu'    =>  [
                                 [
-                                    'text' => 'Proyectos',
-                                    'url'  => '#',
-                                    'icon' => 'fas fa-fw fa-folder-open',
+                                    'text'      => 'Proyectos',
+                                    'icon'      => 'fas fa-fw fa-archive',
+                                    'submenu'   =>  [
+                                                        [
+                                                            'text' => 'Proyectos',
+                                                            'url'  => '#',
+                                                            'icon' => 'fas fa-fw fa-file-invoice',
+                                                        ],
+                                                        [
+                                                            'text' => 'Tipos de Proyectos',
+                                                            'url'  => '#',
+                                                            'icon' => 'fas fa-fw fa-shapes',
+                                                        ],
+                                                        [
+                                                            'text' => 'Estados de Proyectos',
+                                                            'url'  => '#',
+                                                            'icon' => 'fas fa-fw fa-clipboard-check',
+                                                        ],
+                                                    ]
                                 ],
                                 [
-                                    'text' => 'Tipos de Proyectos',
-                                    'url'  => '#',
-                                    'icon' => 'fas fa-fw fa-shapes',
-                                ],
-                                [
-                                    'text' => 'Estados de Proyectos',
-                                    'url'  => '#',
-                                    'icon' => 'fas fa-fw fa-clipboard-check',
-                                ],
-                                [
-                                    'text' => 'Productos',
-                                    'url'  => '#',
-                                    'icon' => 'fas fa-fw fa-cube',
-                                ],
-                                [
-                                    'text' => 'Tipos de Productos',
-                                    'url'  => '#',
-                                    'icon' => 'fas fa-fw fa-cubes',
+                                    'text'    => 'Productos Investigación',
+                                    'icon' => 'fas fa-fw fa-flask',
+                                    'submenu' => [
+                                        [
+                                            'text' => 'Tipos de Productos',
+                                            'url'  => '#',
+                                            'icon' => 'fas fa-fw fa-cubes',
+                                        ],
+                                        [
+                                            'text' => 'Subtipos',
+                                            'url'  => '#',
+                                            'icon' => 'fas fa-fw fa-shapes'
+                                        ],
+                                        [
+                                            'text' => 'Productos',
+                                            'url'  => '#',
+                                            'icon' => 'fas fa-fw fa-cube',
+                                        ],
+                                    ],
                                 ],
                                 [
                                     'text' => 'Convocatorias',
-                                    'url'  => '#',
-                                    'icon' => 'fas fa-fw fa-bullhorn',
+                                    'icon' => 'fas fa-fw fa-podcast',
+                                    'submenu' => [
+                                        [
+                                            'text'  => 'Tipo de Convocatoria',
+                                            'url'   => '#',
+                                            'icon'  => 'fas fa-fw fa-file-audio',
+                                        ],
+                                        [
+                                            'text'  => 'Convocatorias',
+                                            'url'   => '#',
+                                            'icon'  => 'fas fa-fw fa-bullhorn',
+                                        ],
+
+                                                ]
                                 ],
                                 [
                                     'text' => 'Rubros Financiables',
                                     'url'  => '#',
-                                    'icon' => 'fas fa-fw fa-file-invoice-dollar',
+                                    'icon' => 'fas fa-fw fa-hand-holding-usd',
                                 ],
                              ]
         ],

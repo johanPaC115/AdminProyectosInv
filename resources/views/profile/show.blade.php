@@ -1,12 +1,12 @@
 @extends('adminlte::page')
 
-@section('title','Perfil')
+@section('title','Perfile')
 
 @section('content')
     <x-app-layout>
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                {{ __('Perfil') }}
+                {{ __('Profile') }}
             </h2>
         </x-slot>
 
